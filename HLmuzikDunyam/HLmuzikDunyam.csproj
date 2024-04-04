@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12958202-4668-45E1-A39B-99A2417B9F8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HLmuzikDunyam</RootNamespace>
+    <AssemblyName>HLmuzikDunyam</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bankaBilgileri_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bankalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="departmanlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="faturaBilgi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="faturaIcerik.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="firmalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCovidDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCovidDepartman.Designer.cs">
+      <DependentUpon>FormCovidDepartman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCovidListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCovidListesi.Designer.cs">
+      <DependentUpon>FormCovidListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCovidNegatif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCovidNegatif.Designer.cs">
+      <DependentUpon>FormCovidNegatif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCovidPozitif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCovidPozitif.Designer.cs">
+      <DependentUpon>FormCovidPozitif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepartmanEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartmanEkle.Designer.cs">
+      <DependentUpon>FormDepartmanEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepartmanGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartmanGuncelle.Designer.cs">
+      <DependentUpon>FormDepartmanGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepartmanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartmanlar.Designer.cs">
+      <DependentUpon>FormDepartmanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepartmanSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartmanSil.Designer.cs">
+      <DependentUpon>FormDepartmanSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaEkle.Designer.cs">
+      <DependentUpon>FormFaturaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturaKalemDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaKalemDetay.Designer.cs">
+      <DependentUpon>FormFaturaKalemDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturaKalemEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaKalemEkle.Designer.cs">
+      <DependentUpon>FormFaturaKalemEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturalar.Designer.cs">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategoriEkle.Designer.cs">
+      <DependentUpon>FormKategoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategoriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategoriler.Designer.cs">
+      <DependentUpon>FormKategoriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategoriSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategoriSil.Designer.cs">
+      <DependentUpon>FormKategoriSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriEkle.Designer.cs">
+      <DependentUpon>FormMusteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriGuncelle.Designer.cs">
+      <DependentUpon>FormMusteriGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriIstatatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriIstatatistik.Designer.cs">
+      <DependentUpon>FormMusteriIstatatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriler.Designer.cs">
+      <DependentUpon>FormMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriPasifle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriPasifle.Designer.cs">
+      <DependentUpon>FormMusteriPasifle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonelEkle.Designer.cs">
+      <DependentUpon>FormPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonelGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonelGuncelle.Designer.cs">
+      <DependentUpon>FormPersonelGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersoneller.Designer.cs">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPersonelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPersonelSil.Designer.cs">
+      <DependentUpon>FormPersonelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanatciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanatciEkle.Designer.cs">
+      <DependentUpon>FormSanatciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanatciIstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanatciIstatistik.Designer.cs">
+      <DependentUpon>FormSanatciIstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanatcilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanatcilar.Designer.cs">
+      <DependentUpon>FormSanatcilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSatislar.Designer.cs">
+      <DependentUpon>FormSatislar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunEkle.Designer.cs">
+      <DependentUpon>FormUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunGuncelle.Designer.cs">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunIstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunIstatistik.Designer.cs">
+      <DependentUpon>FormUrunIstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunler.Designer.cs">
+      <DependentUpon>FormUrunler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunSatis.Designer.cs">
+      <DependentUpon>FormUrunSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUrunSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUrunSil.Designer.cs">
+      <DependentUpon>FormUrunSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giderler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ilceler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kategoriler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="musteriler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="personeller.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sanatcilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="satinAlma.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="satislar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="urunler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vergiDaireleri.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vergiDaireleriVeFaturalar_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCovidDepartman.resx">
+      <DependentUpon>FormCovidDepartman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCovidListesi.resx">
+      <DependentUpon>FormCovidListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCovidNegatif.resx">
+      <DependentUpon>FormCovidNegatif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCovidPozitif.resx">
+      <DependentUpon>FormCovidPozitif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepartmanEkle.resx">
+      <DependentUpon>FormDepartmanEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepartmanGuncelle.resx">
+      <DependentUpon>FormDepartmanGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepartmanlar.resx">
+      <DependentUpon>FormDepartmanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepartmanSil.resx">
+      <DependentUpon>FormDepartmanSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaEkle.resx">
+      <DependentUpon>FormFaturaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaKalemDetay.resx">
+      <DependentUpon>FormFaturaKalemDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaKalemEkle.resx">
+      <DependentUpon>FormFaturaKalemEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturalar.resx">
+      <DependentUpon>FormFaturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategoriEkle.resx">
+      <DependentUpon>FormKategoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategoriler.resx">
+      <DependentUpon>FormKategoriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategoriSil.resx">
+      <DependentUpon>FormKategoriSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriEkle.resx">
+      <DependentUpon>FormMusteriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriGuncelle.resx">
+      <DependentUpon>FormMusteriGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriIstatatistik.resx">
+      <DependentUpon>FormMusteriIstatatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriler.resx">
+      <DependentUpon>FormMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriPasifle.resx">
+      <DependentUpon>FormMusteriPasifle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonelEkle.resx">
+      <DependentUpon>FormPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonelGuncelle.resx">
+      <DependentUpon>FormPersonelGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersoneller.resx">
+      <DependentUpon>FormPersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonelSil.resx">
+      <DependentUpon>FormPersonelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanatciEkle.resx">
+      <DependentUpon>FormSanatciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanatciIstatistik.resx">
+      <DependentUpon>FormSanatciIstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanatcilar.resx">
+      <DependentUpon>FormSanatcilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSatislar.resx">
+      <DependentUpon>FormSatislar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunEkle.resx">
+      <DependentUpon>FormUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunGuncelle.resx">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunIstatistik.resx">
+      <DependentUpon>FormUrunIstatistik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunler.resx">
+      <DependentUpon>FormUrunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunSatis.resx">
+      <DependentUpon>FormUrunSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUrunSil.resx">
+      <DependentUpon>FormUrunSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HLmuzikİconum.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunİslemleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunSatisİslemleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriIslemleriMenu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunSatinAlma.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firmaIslemleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelIslemleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cikis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geriDonGorsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategoriler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategoriler1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategoriEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategoriSil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunGuncelle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunSil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urunIstatistik.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanatcilar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanatciEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanatciIstatistikleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriHareket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelHareketleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yeniFaturaGirisi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faturalar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mevcutFaturaKalemEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriDuzenle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteriIstatistik.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personeller.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelGuncelle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelimSil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelIstatistikleri.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\departmanlar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\departmanEkle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\departmanSil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anaSayfa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anasayfaSon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rehber.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stoklar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notlarim.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kasa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giderler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bankalar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dosya.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayarlar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UrunlerArka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\girisYapButtonSon.ico" />
+    <None Include="Resources\girisButtonOynat.ico" />
+    <None Include="Resources\girisYapButton.ico" />
+    <None Include="Resources\loginKilitFoto.png" />
+    <None Include="Resources\loginArkaSon.png" />
+    <None Include="Resources\loginArka.png" />
+    <None Include="Resources\vergiDaireleri.ico" />
+    <None Include="Resources\kalemOnaylaButton.ico" />
+    <None Include="Resources\kalemIptalButton.ico" />
+    <None Include="Resources\faturaOnaylaButton.ico" />
+    <None Include="Resources\faturaIptalButton.ico" />
+    <None Include="Resources\faturaNoAlButton.ico" />
+    <None Include="Resources\faturaArkaSon.png" />
+    <None Include="Resources\faturaArka.png" />
+    <None Include="Resources\satisiYap.ico" />
+    <None Include="Resources\borcodIptal.ico" />
+    <None Include="Resources\barcod2.ico" />
+    <None Include="Resources\barcod.ico" />
+    <None Include="Resources\satisiIptalEtButton.ico" />
+    <None Include="Resources\satisYapButtonSonIcon.ico" />
+    <None Include="Resources\satisYapButton.ico" />
+    <None Include="Resources\satislarListesi.ico" />
+    <None Include="Resources\SatisYapMenuButton.ico" />
+    <None Include="Resources\satisNoAlButton.ico" />
+    <None Include="Resources\UrunSatisArka.png" />
+    <None Include="Resources\covidDepartman.png" />
+    <None Include="Resources\personelSilButton.ico" />
+    <None Include="Resources\personelGuncelleButton.ico" />
+    <None Include="Resources\personelEkleButtonn.ico" />
+    <None Include="Resources\parmakIzi2.ico" />
+    <None Include="Resources\pdf2.ico" />
+    <None Include="Resources\personelArka.png" />
+    <None Include="Resources\covidIyilesenHatsaButton.ico" />
+    <None Include="Resources\covidDurumBildirButton.ico" />
+    <None Include="Resources\pandemiArka.png" />
+    <None Include="Resources\kağatılanDepartmanlar.ico" />
+    <None Include="Resources\iyileşenPersonel.ico" />
+    <None Include="Resources\pozitifPersonelEkle.ico" />
+    <None Include="Resources\personelVeCovidDurum.ico" />
+    <None Include="Resources\departmanSilButton.ico" />
+    <None Include="Resources\departmanGuncelle.ico" />
+    <None Include="Resources\departmanGuncelleButton.ico" />
+    <None Include="Resources\departmanEkleKaydet.ico" />
+    <None Include="Resources\departmanArka.png" />
+    <None Include="Resources\harleyDavidsonMusteriSon.png" />
+    <None Include="Resources\twinkleBlueMusteriSon.png" />
+    <None Include="Resources\blueHorizonMusteriSon.png" />
+    <None Include="Resources\twinkleBlueMusteri.png" />
+    <None Include="Resources\blueHorizonMusteri.png" />
+    <None Include="Resources\musteripasifleButton.ico" />
+    <None Include="Resources\musteriPasif.ico" />
+    <None Include="Resources\musteriGüncelleSonButton.ico" />
+    <None Include="Resources\mandarinRedMusteriSon.png" />
+    <None Include="Resources\narenjiOrangeMusteri.png" />
+    <None Include="Resources\creamyPeachMusteri.png" />
+    <None Include="Resources\mandarinRedMusteri.png" />
+    <None Include="Resources\darkMountainMusteri.png" />
+    <None Include="Resources\matPurpleMusteri.png" />
+    <None Include="Resources\musteriIstatistikArka.png" />
+    <None Include="Resources\musteriGuncelleButton.ico" />
+    <None Include="Resources\musteriEkleButton.ico" />
+    <None Include="Resources\musteriArkaSon.png" />
+    <None Include="Resources\musterilerArka.png" />
+    <None Include="Resources\appleValleyToplamSanatci.png" />
+    <None Include="Resources\dupainSanatci.png" />
+    <None Include="Resources\sanatciArkaSon.png" />
+    <None Include="Resources\sanatciArka.png" />
+    <None Include="Resources\sanatciEkleKaydet.ico" />
+    <None Include="Resources\SanatciIstatistikArka.png" />
+    <None Include="Resources\kategoriSilButton.ico" />
+    <None Include="Resources\kategoriEkleButton.ico" />
+    <None Include="Resources\KategorilerArka.png" />
+    <None Include="Resources\UrunIstatistikArka.png" />
+    <None Include="Resources\deepRose.png" />
+    <None Include="Resources\squashBlossom.png" />
+    <None Include="Resources\fadedPoster.png" />
+    <None Include="Resources\eyeOfNewt.png" />
+    <None Include="Resources\coral.png" />
+    <None Include="Resources\magentaPurple.png" />
+    <None Include="Resources\orchidOrange.png" />
+    <None Include="Resources\brightUbeStok.png" />
+    <None Include="Resources\devilBlue.png" />
+    <None Include="Resources\acikYesilMavi.png" />
+    <None Include="Resources\urunSil1.ico" />
+    <None Include="Resources\guncelle.ico" />
+    <None Include="Resources\listele.ico" />
+    <None Include="Resources\urunEkleButton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ticariOtomasyonProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminler">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullaniciAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="parola" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="durum" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="bankalar">
+    <Key>
+      <PropertyRef Name="bankaID" />
+    </Key>
+    <Property Name="bankaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bankaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="il" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="ilce" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Name="sube" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="iban" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="hesapNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="yetkili" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="hesapTuru" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tarih" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="firmaId" Type="Int16" />
+    <Property Name="bankaDurum" Type="Boolean" />
+    <NavigationProperty Name="firmalar" Relationship="Self.FK_bankalar_firmalar1" FromRole="bankalar" ToRole="firmalar" />
+  </EntityType>
+  <EntityType Name="departmanlar">
+    <Key>
+      <PropertyRef Name="departmanID" />
+    </Key>
+    <Property Name="departmanID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="departmanAdi" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="departmanTelefonu" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="departmanDurum" Type="Boolean" />
+    <NavigationProperty Name="personeller" Relationship="Self.FK_personeller_departmanlar" FromRole="departmanlar" ToRole="personeller" />
+    <Property Name="departmanCovidDurum" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="faturaBilgi">
+    <Key>
+      <PropertyRef Name="faturaBilgiID" />
+    </Key>
+    <Property Name="faturaBilgiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SeriSiraNo" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="tarih" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="saat" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="vergiDairsei" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="alici" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="teslimEden" Type="Byte" />
+    <Property Name="teslimAlan" Type="Int32" />
+    <Property Name="faturaBilgiDurum" Type="Boolean" />
+    <NavigationProperty Name="musteriler" Relationship="Self.FK_faturaBilgi_musteriler" FromRole="faturaBilgi" ToRole="musteriler" />
+    <NavigationProperty Name="personeller" Relationship="Self.FK_faturaBilgi_personeller" FromRole="faturaBilgi" ToRole="personeller" />
+    <NavigationProperty Name="faturaIcerik" Relationship="Self.FK_faturaIcerik_faturaBilgi" FromRole="faturaBilgi" ToRole="faturaIcerik" />
+  </EntityType>
+  <EntityType Name="faturaIcerik">
+    <Key>
+      <PropertyRef Name="faturaIcerikID" />
+    </Key>
+    <Property Name="faturaIcerikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunAdi" Type="Int32" />
+    <Property Name="miktar" Type="Int16" />
+    <Property Name="birimFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="tutar" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="faturaBilgiId" Type="Int32" />
+    <Property Name="faturaIcerikdurum" Type="Boolean" />
+    <NavigationProperty Name="faturaBilgi" Relationship="Self.FK_faturaIcerik_faturaBilgi" FromRole="faturaIcerik" ToRole="faturaBilgi" />
+    <NavigationProperty Name="urunler" Relationship="Self.FK_faturaIcerik_urunler" FromRole="faturaIcerik" ToRole="urunler" />
+  </EntityType>
+  <EntityType Name="firmalar">
+    <Key>
+      <PropertyRef Name="firmaID" />
+    </Key>
+    <Property Name="firmaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="yetkiliDepartman" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="yetkiliAdSoyad" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="telefon1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="telefon2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="telefon3" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="fax" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="il" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="ilce" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="vergiDaire" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="firmaDurum" Type="Boolean" />
+    <NavigationProperty Name="bankalar" Relationship="Self.FK_bankalar_firmalar1" FromRole="firmalar" ToRole="bankalar" />
+    <NavigationProperty Name="satinAlma" Relationship="Self.FK_satinAlma_firmalar" FromRole="firmalar" ToRole="satinAlma" />
+  </EntityType>
+  <EntityType Name="giderler">
+    <Key>
+      <PropertyRef Name="giderID" />
+    </Key>
+    <Property Name="giderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ay" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="yil" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="elektrik" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="su" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="dogalGaz" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="internet" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="maaslar" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ekstra" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="notlar" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ilceler">
+    <Key>
+      <PropertyRef Name="ilcelerID" />
+    </Key>
+    <Property Name="ilcelerID" Type="Int32" Nullable="false" />
+    <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="iLId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="iller" Relationship="Self.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="illerID" />
+    </Key>
+    <Property Name="illerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ilceler" Relationship="Self.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
+  </EntityType>
+  <EntityType Name="kategoriler">
+    <Key>
+      <PropertyRef Name="kategoriID" />
+    </Key>
+    <Property Name="kategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriAd" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="kategoriDurum" Type="Boolean" />
+    <NavigationProperty Name="urunler" Relationship="Self.FK_urunler_kategoriler" FromRole="kategoriler" ToRole="urunler" />
+  </EntityType>
+  <EntityType Name="musteriler">
+    <Key>
+      <PropertyRef Name="musteriID" />
+    </Key>
+    <Property Name="musteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="telefon2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="tc" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="il" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="ilce" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vergiDairesi" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="musteriDurum" Type="Boolean" />
+    <NavigationProperty Name="faturaBilgi" Relationship="Self.FK_faturaBilgi_musteriler" FromRole="musteriler" ToRole="faturaBilgi" />
+    <NavigationProperty Name="satislar" Relationship="Self.FK_satislar_musteriler" FromRole="musteriler" ToRole="satislar" />
+  </EntityType>
+  <EntityType Name="personeller">
+    <Key>
+      <PropertyRef Name="personelID" />
+    </Key>
+    <Property Name="personelID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="tc" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="il" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="ilce" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="departmanId" Type="Byte" />
+    <Property Name="perKullaniciAdi" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="perParola" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="personelDurum" Type="Boolean" />
+    <NavigationProperty Name="departmanlar" Relationship="Self.FK_personeller_departmanlar" FromRole="personeller" ToRole="departmanlar" />
+    <NavigationProperty Name="faturaBilgi" Relationship="Self.FK_faturaBilgi_personeller" FromRole="personeller" ToRole="faturaBilgi" />
+    <NavigationProperty Name="satislar" Relationship="Self.FK_satislar_personeller" FromRole="personeller" ToRole="satislar" />
+    <Property Name="covidDurum" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sanatcilar">
+    <Key>
+      <PropertyRef Name="sanatciID" />
+    </Key>
+    <Property Name="sanatciID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sanatciAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="etkinYillari" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dogduguSehir" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="satinAlma" Relationship="Self.FK_satinAlma_sanatcilar" FromRole="sanatcilar" ToRole="satinAlma" />
+    <NavigationProperty Name="urunler" Relationship="Self.FK_urunler_sanatcilar" FromRole="sanatcilar" ToRole="urunler" />
+  </EntityType>
+  <EntityType Name="satinAlma">
+    <Key>
+      <PropertyRef Name="satinAlmaID" />
+    </Key>
+    <Property Name="satinAlmaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunId" Type="Int32" />
+    <Property Name="sanatciId" Type="Byte" />
+    <Property Name="firmaId" Type="Int16" />
+    <NavigationProperty Name="firmalar" Relationship="Self.FK_satinAlma_firmalar" FromRole="satinAlma" ToRole="firmalar" />
+    <NavigationProperty Name="sanatcilar" Relationship="Self.FK_satinAlma_sanatcilar" FromRole="satinAlma" ToRole="sanatcilar" />
+    <NavigationProperty Name="urunler" Relationship="Self.FK_satinAlma_urunler" FromRole="satinAlma" ToRole="urunler" />
+  </EntityType>
+  <EntityType Name="satislar">
+    <Key>
+      <PropertyRef Name="satisID" />
+    </Key>
+    <Property Name="satisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunId" Type="Int32" />
+    <Property Name="satisFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="adet" Type="Int16" />
+    <Property Name="toplamTutar" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="personelId" Type="Byte" />
+    <Property Name="musteriId" Type="Int32" />
+    <Property Name="tarih" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="seriSiraNo" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="musteriler" Relationship="Self.FK_satislar_musteriler" FromRole="satislar" ToRole="musteriler" />
+    <NavigationProperty Name="personeller" Relationship="Self.FK_satislar_personeller" FromRole="satislar" ToRole="personeller" />
+    <NavigationProperty Name="urunler" Relationship="Self.FK_satislar_urunler" FromRole="satislar" ToRole="urunler" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="urunler">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci" Type="Byte" />
+    <Property Name="yil" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="adet" Type="Int16" />
+    <Property Name="alisFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="satisFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="detay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="urunGorsel" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="kategoriId" Type="Int32" />
+    <Property Name="urunDurum" Type="Boolean" />
+    <NavigationProperty Name="faturaIcerik" Relationship="Self.FK_faturaIcerik_urunler" FromRole="urunler" ToRole="faturaIcerik" />
+    <NavigationProperty Name="kategoriler" Relationship="Self.FK_urunler_kategoriler" FromRole="urunler" ToRole="kategoriler" />
+    <NavigationProperty Name="sanatcilar" Relationship="Self.FK_urunler_sanatcilar" FromRole="urunler" ToRole="sanatcilar" />
+    <NavigationProperty Name="satinAlma" Relationship="Self.FK_satinAlma_urunler" FromRole="urunler" ToRole="satinAlma" />
+    <NavigationProperty Name="satislar" Relationship="Self.FK_satislar_urunler" FromRole="urunler" ToRole="satislar" />
+  </EntityType>
+  <Association Name="FK_bankalar_firmalar1">
+    <End Role="firmalar" Type="Self.firmalar" Multiplicity="0..1" />
+    <End Role="bankalar" Type="Self.bankalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firmalar">
+        <PropertyRef Name="firmaID" />
+      </Principal>
+      <Dependent Role="bankalar">
+        <PropertyRef Name="firmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personeller_departmanlar">
+    <End Role="departmanlar" Type="Self.departmanlar" Multiplicity="0..1" />
+    <End Role="personeller" Type="Self.personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="departmanlar">
+        <PropertyRef Name="departmanID" />
+      </Principal>
+      <Dependent Role="personeller">
+        <PropertyRef Name="departmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaBilgi_musteriler">
+    <End Role="musteriler" Type="Self.musteriler" Multiplicity="0..1" />
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriler">
+        <PropertyRef Name="musteriID" />
+      </Principal>
+      <Dependent Role="faturaBilgi">
+        <PropertyRef Name="teslimAlan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaBilgi_personeller">
+    <End Role="personeller" Type="Self.personeller" Multiplicity="0..1" />
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personeller">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="faturaBilgi">
+        <PropertyRef Name="teslimEden" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaIcerik_faturaBilgi">
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="0..1" />
+    <End Role="faturaIcerik" Type="Self.faturaIcerik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faturaBilgi">
+        <PropertyRef Name="faturaBilgiID" />
+      </Principal>
+      <Dependent Role="faturaIcerik">
+        <PropertyRef Name="faturaBilgiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaIcerik_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="faturaIcerik" Type="Self.faturaIcerik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="faturaIcerik">
+        <PropertyRef Name="urunAdi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_firmalar">
+    <End Role="firmalar" Type="Self.firmalar" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firmalar">
+        <PropertyRef Name="firmaID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="firmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilceler_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="1" />
+    <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="illerID" />
+      </Principal>
+      <Dependent Role="ilceler">
+        <PropertyRef Name="iLId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_urunler_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="0..1" />
+    <End Role="urunler" Type="Self.urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="kategoriID" />
+      </Principal>
+      <Dependent Role="urunler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_musteriler">
+    <End Role="musteriler" Type="Self.musteriler" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriler">
+        <PropertyRef Name="musteriID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="musteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_personeller">
+    <End Role="personeller" Type="Self.personeller" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personeller">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="personelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_sanatcilar">
+    <End Role="sanatcilar" Type="Self.sanatcilar" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanatcilar">
+        <PropertyRef Name="sanatciID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="sanatciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_urunler_sanatcilar">
+    <End Role="sanatcilar" Type="Self.sanatcilar" Multiplicity="0..1" />
+    <End Role="urunler" Type="Self.urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanatcilar">
+        <PropertyRef Name="sanatciID" />
+      </Principal>
+      <Dependent Role="urunler">
+        <PropertyRef Name="sanatci" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ticariOtomasyonProjeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminler" EntityType="Self.adminler" />
+    <EntitySet Name="bankalar" EntityType="Self.bankalar" />
+    <EntitySet Name="departmanlar" EntityType="Self.departmanlar" />
+    <EntitySet Name="faturaBilgi" EntityType="Self.faturaBilgi" />
+    <EntitySet Name="faturaIcerik" EntityType="Self.faturaIcerik" />
+    <EntitySet Name="firmalar" EntityType="Self.firmalar" />
+    <EntitySet Name="giderler" EntityType="Self.giderler" />
+    <EntitySet Name="ilceler" EntityType="Self.ilceler" />
+    <EntitySet Name="iller" EntityType="Self.iller" />
+    <EntitySet Name="kategoriler" EntityType="Self.kategoriler" />
+    <EntitySet Name="musteriler" EntityType="Self.musteriler" />
+    <EntitySet Name="personeller" EntityType="Self.personeller" />
+    <EntitySet Name="sanatcilar" EntityType="Self.sanatcilar" />
+    <EntitySet Name="satinAlma" EntityType="Self.satinAlma" />
+    <EntitySet Name="satislar" EntityType="Self.satislar" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="urunler" EntityType="Self.urunler" />
+    <AssociationSet Name="FK_bankalar_firmalar1" Association="Self.FK_bankalar_firmalar1">
+      <End Role="firmalar" EntitySet="firmalar" />
+      <End Role="bankalar" EntitySet="bankalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personeller_departmanlar" Association="Self.FK_personeller_departmanlar">
+      <End Role="departmanlar" EntitySet="departmanlar" />
+      <End Role="personeller" EntitySet="personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaBilgi_musteriler" Association="Self.FK_faturaBilgi_musteriler">
+      <End Role="musteriler" EntitySet="musteriler" />
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaBilgi_personeller" Association="Self.FK_faturaBilgi_personeller">
+      <End Role="personeller" EntitySet="personeller" />
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaIcerik_faturaBilgi" Association="Self.FK_faturaIcerik_faturaBilgi">
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+      <End Role="faturaIcerik" EntitySet="faturaIcerik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaIcerik_urunler" Association="Self.FK_faturaIcerik_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="faturaIcerik" EntitySet="faturaIcerik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_firmalar" Association="Self.FK_satinAlma_firmalar">
+      <End Role="firmalar" EntitySet="firmalar" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="ilceler" EntitySet="ilceler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_urunler_kategoriler" Association="Self.FK_urunler_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="urunler" EntitySet="urunler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_musteriler" Association="Self.FK_satislar_musteriler">
+      <End Role="musteriler" EntitySet="musteriler" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_personeller" Association="Self.FK_satislar_personeller">
+      <End Role="personeller" EntitySet="personeller" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_sanatcilar" Association="Self.FK_satinAlma_sanatcilar">
+      <End Role="sanatcilar" EntitySet="sanatcilar" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_urunler_sanatcilar" Association="Self.FK_urunler_sanatcilar">
+      <End Role="sanatcilar" EntitySet="sanatcilar" />
+      <End Role="urunler" EntitySet="urunler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_urunler" Association="Self.FK_satinAlma_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_urunler" Association="Self.FK_satislar_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <FunctionImport Name="bankaBilgileri" ReturnType="Collection(ticariOtomasyonProjeModel.bankaBilgileri_Result)" />
+    <FunctionImport Name="musteriHareketler" />
+    <FunctionImport Name="musteriHareketler2" />
+    <FunctionImport Name="enFazlaUrunluSanatci" ReturnType="Collection(String)" />
+    <FunctionImport Name="enFazlaUrunluKategori" ReturnType="Collection(String)" />
+    <FunctionImport Name="enFazlaMusteriliIl" ReturnType="Collection(String)" />
+    <EntitySet Name="vergiDaireleri" EntityType="ticariOtomasyonProjeModel.vergiDaireleri" />
+    <FunctionImport Name="vergiDaireleriVeFaturalar" ReturnType="Collection(ticariOtomasyonProjeModel.vergiDaireleriVeFaturalar_Result)" />
+  </EntityContainer>
+  <ComplexType Name="bankaBilgileri_Result">
+    <Property Type="Int16" Name="bankaID" Nullable="false" />
+    <Property Type="String" Name="Banka_Adı" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="İl" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="İlçe" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Şube" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Iban" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Hesap_No" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Yetkili" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Tarih" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Hesap_Türü" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Firma_Adı" Nullable="true" MaxLength="40" />
+  </ComplexType>
+  <EntityType Name="vergiDaireleri">
+    <Key>
+      <PropertyRef Name="vergiDairesiId" />
+    </Key>
+    <Property Name="vergiDairesiId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="vergiDaireleriVeFaturalar_Result">
+    <Property Type="Byte" Name="vergiDairesiId" Nullable="false" />
+    <Property Type="String" Name="adi" Nullable="true" MaxLength="40" />
+  </ComplexType>
+</Schema>

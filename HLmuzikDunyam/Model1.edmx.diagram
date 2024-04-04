@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78ab60cf0bcc4737a1a7ca54290e6d09" Name="Diagram1">
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.adminler" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.bankalar" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.departmanlar" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.faturaBilgi" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.faturaIcerik" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.firmalar" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.giderler" Width="1.5" PointX="8.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.ilceler" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.iller" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.kategoriler" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.musteriler" Width="1.5" PointX="3.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.personeller" Width="1.5" PointX="3.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.sanatcilar" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.satinAlma" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.satislar" Width="1.5" PointX="11.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.urunler" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_bankalar_firmalar1" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_personeller_departmanlar" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_faturaBilgi_musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_faturaBilgi_personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_faturaIcerik_faturaBilgi" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_faturaIcerik_urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satinAlma_firmalar" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_ilceler_iller" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_urunler_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satislar_musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satislar_personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satinAlma_sanatcilar" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_urunler_sanatcilar" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satinAlma_urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="ticariOtomasyonProjeModel.FK_satislar_urunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ticariOtomasyonProjeModel.vergiDaireleri" Width="1.5" PointX="10.5" PointY="1.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

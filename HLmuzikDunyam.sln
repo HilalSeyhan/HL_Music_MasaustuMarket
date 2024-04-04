@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1321
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLmuzikDunyam", "HLmuzikDunyam\HLmuzikDunyam.csproj", "{12958202-4668-45E1-A39B-99A2417B9F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12958202-4668-45E1-A39B-99A2417B9F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12958202-4668-45E1-A39B-99A2417B9F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12958202-4668-45E1-A39B-99A2417B9F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12958202-4668-45E1-A39B-99A2417B9F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {227D8255-D8C8-4073-98BB-F7315B912892}
+	EndGlobalSection
+EndGlobal

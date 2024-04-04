@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ticariOtomasyonProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adminler">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="30" />
+    <Property Name="parola" Type="nvarchar" MaxLength="20" />
+    <Property Name="ad" Type="nvarchar" MaxLength="30" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="durum" Type="bit" />
+  </EntityType>
+  <EntityType Name="bankalar">
+    <Key>
+      <PropertyRef Name="bankaID" />
+    </Key>
+    <Property Name="bankaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bankaAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="il" Type="nvarchar" MaxLength="13" />
+    <Property Name="ilce" Type="nchar" MaxLength="25" />
+    <Property Name="sube" Type="nvarchar" MaxLength="30" />
+    <Property Name="iban" Type="nvarchar" MaxLength="30" />
+    <Property Name="hesapNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="yetkili" Type="nvarchar" MaxLength="60" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="hesapTuru" Type="nvarchar" MaxLength="20" />
+    <Property Name="tarih" Type="nvarchar" MaxLength="20" />
+    <Property Name="firmaId" Type="smallint" />
+    <Property Name="bankaDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="departmanlar">
+    <Key>
+      <PropertyRef Name="departmanID" />
+    </Key>
+    <Property Name="departmanID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="departmanAdi" Type="nvarchar" MaxLength="60" />
+    <Property Name="departmanTelefonu" Type="nvarchar" MaxLength="15" />
+    <Property Name="departmanDurum" Type="bit" />
+    <Property Name="departmanCovidDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="faturaBilgi">
+    <Key>
+      <PropertyRef Name="faturaBilgiID" />
+    </Key>
+    <Property Name="faturaBilgiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SeriSiraNo" Type="nvarchar" MaxLength="60" />
+    <Property Name="tarih" Type="nvarchar" MaxLength="20" />
+    <Property Name="saat" Type="nvarchar" MaxLength="5" />
+    <Property Name="vergiDairsei" Type="nvarchar" MaxLength="40" />
+    <Property Name="alici" Type="nvarchar" MaxLength="60" />
+    <Property Name="teslimEden" Type="tinyint" />
+    <Property Name="teslimAlan" Type="int" />
+    <Property Name="faturaBilgiDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="faturaIcerik">
+    <Key>
+      <PropertyRef Name="faturaIcerikID" />
+    </Key>
+    <Property Name="faturaIcerikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAdi" Type="int" />
+    <Property Name="miktar" Type="smallint" />
+    <Property Name="birimFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="tutar" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="faturaBilgiId" Type="int" />
+    <Property Name="faturaIcerikdurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="firmalar">
+    <Key>
+      <PropertyRef Name="firmaID" />
+    </Key>
+    <Property Name="firmaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="40" />
+    <Property Name="yetkiliDepartman" Type="nvarchar" MaxLength="40" />
+    <Property Name="yetkiliAdSoyad" Type="nvarchar" MaxLength="60" />
+    <Property Name="telefon1" Type="nvarchar" MaxLength="15" />
+    <Property Name="telefon2" Type="nvarchar" MaxLength="15" />
+    <Property Name="telefon3" Type="nvarchar" MaxLength="15" />
+    <Property Name="mail" Type="nvarchar" MaxLength="40" />
+    <Property Name="fax" Type="nvarchar" MaxLength="30" />
+    <Property Name="il" Type="nvarchar" MaxLength="13" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="25" />
+    <Property Name="vergiDaire" Type="nvarchar" MaxLength="40" />
+    <Property Name="adres" Type="nvarchar(max)" />
+    <Property Name="firmaDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="giderler">
+    <Key>
+      <PropertyRef Name="giderID" />
+    </Key>
+    <Property Name="giderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ay" Type="nvarchar" MaxLength="10" />
+    <Property Name="yil" Type="char" MaxLength="4" />
+    <Property Name="elektrik" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="su" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="dogalGaz" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="internet" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="maaslar" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ekstra" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="notlar" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ilceler">
+    <Key>
+      <PropertyRef Name="ilcelerID" />
+    </Key>
+    <Property Name="ilcelerID" Type="int" Nullable="false" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+    <Property Name="iLId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="illerID" />
+    </Key>
+    <Property Name="illerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="kategoriler">
+    <Key>
+      <PropertyRef Name="kategoriID" />
+    </Key>
+    <Property Name="kategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kategoriAd" Type="nvarchar" MaxLength="40" />
+    <Property Name="kategoriDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="musteriler">
+    <Key>
+      <PropertyRef Name="musteriID" />
+    </Key>
+    <Property Name="musteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="20" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="telefon2" Type="nvarchar" MaxLength="15" />
+    <Property Name="tc" Type="char" MaxLength="11" />
+    <Property Name="mail" Type="nvarchar" MaxLength="40" />
+    <Property Name="il" Type="nvarchar" MaxLength="13" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="25" />
+    <Property Name="adres" Type="nvarchar(max)" />
+    <Property Name="vergiDairesi" Type="nvarchar" MaxLength="40" />
+    <Property Name="musteriDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="personeller">
+    <Key>
+      <PropertyRef Name="personelID" />
+    </Key>
+    <Property Name="personelID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="20" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="tc" Type="char" MaxLength="11" />
+    <Property Name="mail" Type="nvarchar" MaxLength="40" />
+    <Property Name="il" Type="nvarchar" MaxLength="13" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="25" />
+    <Property Name="adres" Type="nvarchar(max)" />
+    <Property Name="departmanId" Type="tinyint" />
+    <Property Name="perKullaniciAdi" Type="nvarchar" MaxLength="40" />
+    <Property Name="perParola" Type="nvarchar" MaxLength="30" />
+    <Property Name="personelDurum" Type="bit" />
+    <Property Name="covidDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="sanatcilar">
+    <Key>
+      <PropertyRef Name="sanatciID" />
+    </Key>
+    <Property Name="sanatciID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sanatciAdi" Type="nvarchar" MaxLength="100" />
+    <Property Name="etkinYillari" Type="nvarchar" MaxLength="50" />
+    <Property Name="dogduguSehir" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="satinAlma">
+    <Key>
+      <PropertyRef Name="satinAlmaID" />
+    </Key>
+    <Property Name="satinAlmaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunId" Type="int" />
+    <Property Name="sanatciId" Type="tinyint" />
+    <Property Name="firmaId" Type="smallint" />
+  </EntityType>
+  <EntityType Name="satislar">
+    <Key>
+      <PropertyRef Name="satisID" />
+    </Key>
+    <Property Name="satisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunId" Type="int" />
+    <Property Name="satisFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="adet" Type="smallint" />
+    <Property Name="toplamTutar" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="personelId" Type="tinyint" />
+    <Property Name="musteriId" Type="int" />
+    <Property Name="tarih" Type="nvarchar" MaxLength="20" />
+    <Property Name="seriSiraNo" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="urunler">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="sanatci" Type="tinyint" />
+    <Property Name="yil" Type="char" MaxLength="4" />
+    <Property Name="adet" Type="smallint" />
+    <Property Name="alisFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="satisFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="detay" Type="nvarchar(max)" />
+    <Property Name="urunGorsel" Type="nvarchar" MaxLength="300" />
+    <Property Name="kategoriId" Type="int" />
+    <Property Name="urunDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="vergiDaireleri">
+    <Key>
+      <PropertyRef Name="vergiDairesiId" />
+    </Key>
+    <Property Name="vergiDairesiId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="40" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="15" />
+    <Property Name="mail" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <Association Name="FK_bankalar_firmalar1">
+    <End Role="firmalar" Type="Self.firmalar" Multiplicity="0..1" />
+    <End Role="bankalar" Type="Self.bankalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firmalar">
+        <PropertyRef Name="firmaID" />
+      </Principal>
+      <Dependent Role="bankalar">
+        <PropertyRef Name="firmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaBilgi_musteriler">
+    <End Role="musteriler" Type="Self.musteriler" Multiplicity="0..1" />
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriler">
+        <PropertyRef Name="musteriID" />
+      </Principal>
+      <Dependent Role="faturaBilgi">
+        <PropertyRef Name="teslimAlan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaBilgi_personeller">
+    <End Role="personeller" Type="Self.personeller" Multiplicity="0..1" />
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personeller">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="faturaBilgi">
+        <PropertyRef Name="teslimEden" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaIcerik_faturaBilgi">
+    <End Role="faturaBilgi" Type="Self.faturaBilgi" Multiplicity="0..1" />
+    <End Role="faturaIcerik" Type="Self.faturaIcerik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faturaBilgi">
+        <PropertyRef Name="faturaBilgiID" />
+      </Principal>
+      <Dependent Role="faturaIcerik">
+        <PropertyRef Name="faturaBilgiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_faturaIcerik_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="faturaIcerik" Type="Self.faturaIcerik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="faturaIcerik">
+        <PropertyRef Name="urunAdi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilceler_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="1" />
+    <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="illerID" />
+      </Principal>
+      <Dependent Role="ilceler">
+        <PropertyRef Name="iLId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personeller_departmanlar">
+    <End Role="departmanlar" Type="Self.departmanlar" Multiplicity="0..1" />
+    <End Role="personeller" Type="Self.personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="departmanlar">
+        <PropertyRef Name="departmanID" />
+      </Principal>
+      <Dependent Role="personeller">
+        <PropertyRef Name="departmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_firmalar">
+    <End Role="firmalar" Type="Self.firmalar" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firmalar">
+        <PropertyRef Name="firmaID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="firmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_sanatcilar">
+    <End Role="sanatcilar" Type="Self.sanatcilar" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanatcilar">
+        <PropertyRef Name="sanatciID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="sanatciId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satinAlma_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="satinAlma" Type="Self.satinAlma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="satinAlma">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_musteriler">
+    <End Role="musteriler" Type="Self.musteriler" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriler">
+        <PropertyRef Name="musteriID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="musteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_personeller">
+    <End Role="personeller" Type="Self.personeller" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personeller">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="personelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_satislar_urunler">
+    <End Role="urunler" Type="Self.urunler" Multiplicity="0..1" />
+    <End Role="satislar" Type="Self.satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urunler">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_urunler_kategoriler">
+    <End Role="kategoriler" Type="Self.kategoriler" Multiplicity="0..1" />
+    <End Role="urunler" Type="Self.urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriler">
+        <PropertyRef Name="kategoriID" />
+      </Principal>
+      <Dependent Role="urunler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_urunler_sanatcilar">
+    <End Role="sanatcilar" Type="Self.sanatcilar" Multiplicity="0..1" />
+    <End Role="urunler" Type="Self.urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanatcilar">
+        <PropertyRef Name="sanatciID" />
+      </Principal>
+      <Dependent Role="urunler">
+        <PropertyRef Name="sanatci" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="bankaBilgileri" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="enFazlaMusteriliIl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="enFazlaUrunluKategori" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="enFazlaUrunluSanatci" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="musteriHareketler" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="musteriHareketler2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="vergiDaireleriVeFaturalar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ticariOtomasyonProjeModelStoreContainer">
+    <EntitySet Name="adminler" EntityType="Self.adminler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bankalar" EntityType="Self.bankalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="departmanlar" EntityType="Self.departmanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="faturaBilgi" EntityType="Self.faturaBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="faturaIcerik" EntityType="Self.faturaIcerik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="firmalar" EntityType="Self.firmalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="giderler" EntityType="Self.giderler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kategoriler" EntityType="Self.kategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteriler" EntityType="Self.musteriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personeller" EntityType="Self.personeller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sanatcilar" EntityType="Self.sanatcilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="satinAlma" EntityType="Self.satinAlma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="satislar" EntityType="Self.satislar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urunler" EntityType="Self.urunler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vergiDaireleri" EntityType="Self.vergiDaireleri" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_bankalar_firmalar1" Association="Self.FK_bankalar_firmalar1">
+      <End Role="firmalar" EntitySet="firmalar" />
+      <End Role="bankalar" EntitySet="bankalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaBilgi_musteriler" Association="Self.FK_faturaBilgi_musteriler">
+      <End Role="musteriler" EntitySet="musteriler" />
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaBilgi_personeller" Association="Self.FK_faturaBilgi_personeller">
+      <End Role="personeller" EntitySet="personeller" />
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaIcerik_faturaBilgi" Association="Self.FK_faturaIcerik_faturaBilgi">
+      <End Role="faturaBilgi" EntitySet="faturaBilgi" />
+      <End Role="faturaIcerik" EntitySet="faturaIcerik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_faturaIcerik_urunler" Association="Self.FK_faturaIcerik_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="faturaIcerik" EntitySet="faturaIcerik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="ilceler" EntitySet="ilceler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personeller_departmanlar" Association="Self.FK_personeller_departmanlar">
+      <End Role="departmanlar" EntitySet="departmanlar" />
+      <End Role="personeller" EntitySet="personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_firmalar" Association="Self.FK_satinAlma_firmalar">
+      <End Role="firmalar" EntitySet="firmalar" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_sanatcilar" Association="Self.FK_satinAlma_sanatcilar">
+      <End Role="sanatcilar" EntitySet="sanatcilar" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satinAlma_urunler" Association="Self.FK_satinAlma_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="satinAlma" EntitySet="satinAlma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_musteriler" Association="Self.FK_satislar_musteriler">
+      <End Role="musteriler" EntitySet="musteriler" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_personeller" Association="Self.FK_satislar_personeller">
+      <End Role="personeller" EntitySet="personeller" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_satislar_urunler" Association="Self.FK_satislar_urunler">
+      <End Role="urunler" EntitySet="urunler" />
+      <End Role="satislar" EntitySet="satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_urunler_kategoriler" Association="Self.FK_urunler_kategoriler">
+      <End Role="kategoriler" EntitySet="kategoriler" />
+      <End Role="urunler" EntitySet="urunler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_urunler_sanatcilar" Association="Self.FK_urunler_sanatcilar">
+      <End Role="sanatcilar" EntitySet="sanatcilar" />
+      <End Role="urunler" EntitySet="urunler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

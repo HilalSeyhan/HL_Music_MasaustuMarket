@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="urunGuncelle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunGuncelle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunler.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriler1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriler1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mandarinRedMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mandarinRedMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelGuncelleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelGuncelleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="narenjiOrangeMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\narenjiOrangeMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personeller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personeller.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appleValleyToplamSanatci" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appleValleyToplamSanatci.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="acikYesilMavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\acikYesilMavi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginArkaSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginArkaSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelSilButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelSilButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pandemiArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pandemiArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rehber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rehber.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriSilButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriSilButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelIstatistikleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelIstatistikleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunSatinAlma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunSatinAlma.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musterilerArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musterilerArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twinkleBlueMusteriSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twinkleBlueMusteriSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="covidDepartman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\covidDepartman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatciIstatistikleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatciIstatistikleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriDuzenle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriDuzenle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunİslemleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunİslemleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanGuncelle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanGuncelle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giderler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giderler.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelVeCovidDurum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelVeCovidDurum.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="creamyPeachMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\creamyPeachMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcod2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcod2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatciEkleKaydet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatciEkleKaydet.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturaArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturaArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borcodIptal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borcodIptal.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satislarListesi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satislarListesi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="covidIyilesenHatsaButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\covidIyilesenHatsaButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelEkleButtonn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelEkleButtonn.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueHorizonMusteriSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueHorizonMusteriSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelGuncelle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelGuncelle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturaOnaylaButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturaOnaylaButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="covidDurumBildirButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\covidDurumBildirButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginKilitFoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginKilitFoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SatisYapMenuButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SatisYapMenuButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satisiYap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satisiYap.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunSil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunSil.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriPasif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriPasif.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriArkaSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriArkaSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="listele" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\listele.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatciArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatciArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HLmuzikİconum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HLmuzikİconum.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatciEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatciEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriler.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anaSayfa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anaSayfa.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firmaIslemleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firmaIslemleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notlarim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notlarim.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harleyDavidsonMusteriSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harleyDavidsonMusteriSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twinkleBlueMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twinkleBlueMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="devilBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\devilBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UrunSatisArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UrunSatisArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satisYapButtonSonIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satisYapButtonSonIcon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UrunIstatistikArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UrunIstatistikArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deepRose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deepRose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriIstatistik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriIstatistik.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stoklar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stoklar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanSilButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanSilButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteripasifleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteripasifleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iyileşenPersonel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iyileşenPersonel.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dupainSanatci" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dupainSanatci.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeniFaturaGirisi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeniFaturaGirisi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatciArkaSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatciArkaSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mandarinRedMusteriSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mandarinRedMusteriSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="matPurpleMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\matPurpleMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturalar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriEkleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriEkleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueHorizonMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueHorizonMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="girisButtonOynat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\girisButtonOynat.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ayarlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ayarlar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bankalar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bankalar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriIstatistikArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriIstatistikArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vergiDaireleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vergiDaireleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anasayfaSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anasayfaSon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dosya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dosya.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cikis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cikis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="parmakIzi2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\parmakIzi2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kalemIptalButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kalemIptalButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="geriDonGorsel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geriDonGorsel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriHareket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriHareket.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunSatisİslemleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunSatisİslemleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kasa.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kağatılanDepartmanlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kağatılanDepartmanlar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriEkleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriEkleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriGuncelleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriGuncelleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelimSil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelimSil.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brightUbeStok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brightUbeStok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanSil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanSil.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanlar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanatcilar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanatcilar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UrunlerArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UrunlerArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satisYapButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satisYapButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darkMountainMusteri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darkMountainMusteri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SanatciIstatistikArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SanatciIstatistikArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanGuncelleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanGuncelleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barcod" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barcod.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KategorilerArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KategorilerArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelArka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelArka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunEkleButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunEkleButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriGüncelleSonButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriGüncelleSonButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturaIptalButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturaIptalButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orchidOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orchidOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squashBlossom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squashBlossom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunSil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunSil1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fadedPoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fadedPoster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kalemOnaylaButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kalemOnaylaButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="departmanEkleKaydet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\departmanEkleKaydet.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturaArkaSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturaArkaSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pozitifPersonelEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pozitifPersonelEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eyeOfNewt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eyeOfNewt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guncelle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guncelle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magentaPurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magentaPurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musteriIslemleriMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musteriIslemleriMenu.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satisiIptalEtButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satisiIptalEtButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="satisNoAlButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satisNoAlButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriler.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mevcutFaturaKalemEkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mevcutFaturaKalemEkle.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kategoriSil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kategoriSil.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="girisYapButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\girisYapButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelHareketleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelHareketleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="urunIstatistik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\urunIstatistik.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personelIslemleri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personelIslemleri.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="faturaNoAlButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faturaNoAlButton.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="girisYapButtonSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\girisYapButtonSon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

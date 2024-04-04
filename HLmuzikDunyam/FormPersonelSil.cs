@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+
+namespace HLmuzikDunyam
+{
+    public partial class FormPersonelSil : DevExpress.XtraEditors.XtraForm
+    {
+        public FormPersonelSil()
+        {
+            InitializeComponent();
+        }
+
+        ticariOtomasyonProjeEntities c = new ticariOtomasyonProjeEntities();
+
+        private void FormPersonelSil_Load(object sender, EventArgs e)
+        {
+            var personelListem = c.personeller.Where(x => x.personelDurum == true && x.departmanlar.departmanDurum == true).Select(x => new
+            {
+                PersonelID = x.personelID,
+                TC = x.tc,
+                Ad = x.ad,
+                Soyad = x.soyad,
+                Telefon = x.telefon,
+                Mail = x.mail,
+                Departman = x.departmanlar.departmanAdi,
+                KullanıcıAdı = x.perKullaniciAdi,
+                İl = x.il,
+                İlçe = x.ilce,
+                Adres = x.adres
+            }).ToList();
+            gridControl2.DataSource = personelListem;
+
+            txtEdtID.ReadOnly = true;
+            txtEdtTC.ReadOnly = true;
+            txtEdtAd.ReadOnly = true;
+            txtEdtSoyad.ReadOnly = true;
+            mskdTxtBoxTelefon.ReadOnly = true;
+            txtEdtMail.ReadOnly = true;
+            txtEdtDepartman.ReadOnly = true;
+            txtEdtKullaniciAdi.ReadOnly = true;
+            txtEdtIl.ReadOnly = true;
+            txtEdtIlce.ReadOnly = true;
+            txtBoxAdres.ReadOnly = true;
+        }
+
+        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            txtEdtID.Text = gridView2.GetFocusedRowCellValue("PersonelID").ToString();
+            txtEdtTC.Text = gridView2.GetFocusedRowCellValue("TC").ToString();
+            txtEdtAd.Text = gridView2.GetFocusedRowCellValue("Ad").ToString();
+            txtEdtSoyad.Text = gridView2.GetFocusedRowCellValue("Soyad").ToString();
+            mskdTxtBoxTelefon.Text = gridView2.GetFocusedRowCellValue("Telefon").ToString();
+            txtEdtMail.Text = gridView2.GetFocusedRowCellValue("Mail").ToString();
+            txtEdtDepartman.Text = gridView2.GetFocusedRowCellValue("Departman").ToString();
+            txtEdtKullaniciAdi.Text = gridView2.GetFocusedRowCellValue("KullanıcıAdı").ToString();
+            txtEdtIl.Text = gridView2.GetFocusedRowCellValue("İl").ToString();
+            txtEdtIlce.Text = gridView2.GetFocusedRowCellValue("İlçe").ToString();
+            txtBoxAdres.Text = gridView2.GetFocusedRowCellValue("Adres").ToString();
+        }
+
+        private void smplBtnSil_Click(object sender, EventArgs e)
+        {
+            int secilenId = int.Parse(txtEdtID.Text);
+            var bul = c.personeller.Find(secilenId);
+            bul.personelDurum = false;
+            c.SaveChanges();
+            MessageBox.Show("Personel Silindi..\nPersoneller Sayfasını Ziyaret Ederek ya da Listele Buttonunu Kullanarak Teyit Edebilirsiniz..", "♪ HL MÜZİK DÜNYASI ♪", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void smplBtnListele_Click(object sender, EventArgs e)
+        {
+            var personelListem = c.personeller.Where(x => x.personelDurum == true).Select(x => new
+            {
+                PersonelID = x.personelID,
+                TC = x.tc,
+                Ad = x.ad,
+                Soyad = x.soyad,
+                Telefon = x.telefon,
+                Mail = x.mail,
+                Departman = x.departmanlar.departmanAdi,
+                KullanıcıAdı = x.perKullaniciAdi,
+                İl = x.il,
+                İlçe = x.ilce,
+                Adres = x.adres
+            }).ToList();
+            gridControl2.DataSource = personelListem;
+        }
+    }
+}
